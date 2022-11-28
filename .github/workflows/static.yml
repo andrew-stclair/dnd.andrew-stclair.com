@@ -32,6 +32,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - name: Generate index files
+        run: |
+          for folder in $(find src -type d); do; cd $folder; tree -H '.' -L 1 --noreport --charset utf-8 -o index.html; done
       - name: Build 11ty
         run: |
           cd $GITHUB_WORKSPACE
