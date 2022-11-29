@@ -31,7 +31,7 @@
     <hl />
     <ul>
         <li class="back"><a href="..">Up one level</a></li>
-        {%- for item in pagedata[0].contents %}<li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}
+        {%- for item in pagedata[0].contents %}<li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a> - {{ item.time }} - {{ item.size }}</li>{%- endfor %}
     </ul>
 </body>
 
