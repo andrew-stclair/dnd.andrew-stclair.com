@@ -1,3 +1,13 @@
-<html><head><title>D&D</title></head>
-<body><ul>{%- for item in pagedata[0].contents %}<li><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}</ul></body>
+<html>
+
+<head>
+    <title>D&D</title>
+</head>
+
+<body>
+    <ul>
+        {%- for item in pagedata[0].contents %}<li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}
+    </ul>
+</body>
+
 </html>
