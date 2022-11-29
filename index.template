@@ -24,7 +24,7 @@
         }
 
         thead tr {
-            background: rgb(150, 150, 150);
+            background: rgb(194, 194, 194);
         }
 
         tbody tr:nth-child(odd) {
