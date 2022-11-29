@@ -28,7 +28,7 @@
 
 <body>
     <ul>
-        <li class="back"><a href="Up one level"></a>
+        <li class="back"><a href="..">Up one level</a>
             {%- for item in pagedata[0].contents %}
         <li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}
     </ul>
