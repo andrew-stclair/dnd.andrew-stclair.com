@@ -2,5 +2,3 @@ build
 kubernetes
 node_modules/
 .DS_Store
-src/index.njk
-src/figures/index.njk
