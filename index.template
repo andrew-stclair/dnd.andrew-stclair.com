@@ -2,13 +2,35 @@
 
 <head>
     <title>D&D</title>
-    <style>ul {list-style: none; margin-left: 0; padding-left: 0;} .file:before {content: "📄"; padding-right: 5px;} .directory:before {content: "📁"; padding-right: 5px;}</style>
+    <style>
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .file:before {
+            content: "📄";
+            padding-right: 5px;
+        }
+
+        .directory:before {
+            content: "📂";
+            padding-right: 5px;
+        }
+
+        .back:before {
+            content: "↩️";
+            padding-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <ul>
-        <li class="directory"><a href=".."></a>
-        {%- for item in pagedata[0].contents %}<li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}
+        <li class="back"><a href="Up one level"></a>
+            {%- for item in pagedata[0].contents %}
+        <li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a></li>{%- endfor %}
     </ul>
 </body>
 
