@@ -34,7 +34,7 @@
         {%- for item in pagedata[0].contents %}
         <tr class="{{ item.type }}">
             <td><a href="{{ item.name }}">{{ item.name }}</a></td>
-            <td style="width:20%;">{{ item.size }}</td>
+            <td style="width:30px;">{{ item.size }}</td>
         </tr>
         {%- endfor %}
     </ul>
