@@ -20,6 +20,7 @@
 
         table {
             width: 100%;
+            border-collapse: collapse;
         }
 
         thead tr {
@@ -27,11 +28,11 @@
         }
 
         tbody tr:nth-child(odd) {
-            background: rgb(207, 207, 207);
+            background: rgb(243, 243, 243);
         }
 
         tbody tr:nth-child(even) {
-            background: rgb(177, 177, 177);
+            background: rgb(221, 221, 221);
         }
     </style>
 </head>
