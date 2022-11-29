@@ -5,17 +5,17 @@
     <style>
         .file:before {
             content: "📄";
-            padding-right: 5px;
+            padding-right: 0px;
         }
 
         .directory:before {
             content: "📂";
-            padding-right: 5px;
+            padding-right: 0px;
         }
 
         .back:before {
             content: "↩️";
-            padding-right: 5px;
+            padding-right: 0px;
         }
 
         table {
@@ -28,16 +28,24 @@
     <h1>Index of {{ page.url }}</h1>
     <hl />
     <table>
-        <tr class="back">
-            <td colspan=2><a href="..">Up one level</a></td>
-        </tr>
-        {%- for item in pagedata[0].contents %}
-        <tr class="{{ item.type }}">
-            <td><a href="{{ item.name }}">{{ item.name }}</a></td>
-            <td style="width:30px;">{{ item.size }}</td>
-        </tr>
-        {%- endfor %}
-    </ul>
+        <thead>
+            <tr>
+                <td>File name</td>
+                <td>Size</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="back">
+                <td colspan=2><a href="..">Up one level</a></td>
+            </tr>
+            {%- for item in pagedata[0].contents %}
+            <tr class="{{ item.type }}">
+                <td><a href="{{ item.name }}">{{ item.name }}</a></td>
+                <td style="width:60px;">{{ item.size }}</td>
+            </tr>
+            {%- endfor %}
+        </tbody>
+    </table>
 </body>
 
 </html>
