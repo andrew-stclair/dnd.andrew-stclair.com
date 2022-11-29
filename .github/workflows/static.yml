@@ -37,7 +37,7 @@ jobs:
           for folder in $(find src -type d)
           do
           cd $GITHUB_WORKSPACE/$folder
-          tree -H '.' -L 1 --noreport --charset utf-8 -o index.html
+          tree -J -L 1 --noreport --charset utf-8 -o $GITHUB_WORKSPACE/src/_data/$folder/index.json
           done
       - name: Build 11ty
         run: |
