@@ -3,12 +3,6 @@
 <head>
     <title>D&D - Index of {{ page.url }}</title>
     <style>
-        ul {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
         .file:before {
             content: "📄";
             padding-right: 5px;
@@ -29,9 +23,16 @@
 <body>
     <h1>Index of {{ page.url }}</h1>
     <hl />
-    <ul>
-        <li class="back"><a href="..">Up one level</a></li>
-        {%- for item in pagedata[0].contents %}<li class="{{ item.type }}"><a href="{{ item.name }}">{{ item.name }}</a> - {{ item.time }} - {{ item.size }}</li>{%- endfor %}
+    <table>
+        <tr class="back">
+            <td colspan=2><a href="..">Up one level</a></td>
+        </tr>
+        {%- for item in pagedata[0].contents %}
+        <tr class="{{ item.type }}">
+            <td><a href="{{ item.name }}">{{ item.name }}</a></td>
+            <td>{{ item.size }}</td>
+        </tr>
+        {%- endfor %}
     </ul>
 </body>
 
