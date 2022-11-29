@@ -37,7 +37,7 @@ jobs:
           for folder in $(find src -type d)
           do
           cd $GITHUB_WORKSPACE/$folder
-          echo -e "---json\n{\"pagedata\": $(tree -J -L 1 --noreport --charset utf-8)}\n---\n{%- for item in pagedata[0].contents %}<a href="{{ item.name }}">{{ item.name }}</a>{%- endfor %}" >> $GITHUB_WORKSPACE/$folder/index.njk
+          echo -e "---json\n{\"pagedata\": $(tree -J -L 1 --noreport --charset utf-8)}\n---\n$(cat $GITHUB_WORKSPACE/index.template)" >> $GITHUB_WORKSPACE/$folder/index.njk
           done
       - name: Build 11ty
         run: |
