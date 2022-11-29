@@ -2,6 +2,7 @@
 
 <head>
     <title>D&D</title>
+    <style>ul {list-style: none; margin-left: 0; padding-left: 0;} .file:before {content: "📄"; padding-right: 5px;} .directory:before {content: "📁"; padding-right: 5px;}</style>
 </head>
 
 <body>
