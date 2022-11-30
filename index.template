@@ -49,7 +49,7 @@
             </tr>
         </thead>
         <tbody>
-            {% if not page.url == "/" %}
+            {% if not page.url in "/" %}
             <tr>
                 <td class="back" colspan=2><a href="..">Up one level</a></td>
             </tr>
