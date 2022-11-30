@@ -9,5 +9,6 @@
     "git.autofetch": true,
     "remoteHub.commitDirectlyWarning": "off",
     "git.enableSmartCommit": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.postCommitCommand": "sync"
 }
