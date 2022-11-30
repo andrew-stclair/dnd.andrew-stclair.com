@@ -1,0 +1,10 @@
+{
+    "git.autorefresh": true,
+    "git.branchProtection": [
+        "master"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "git.mergeEditor": true,
+    "git.pullBeforeCheckout": true,
+    "git.autofetch": true
+}
