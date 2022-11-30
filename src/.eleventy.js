@@ -1,6 +1,7 @@
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy("src/figures");
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPlugin(directoryOutputPlugin, {
